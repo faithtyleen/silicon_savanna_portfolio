@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteBase /silicon-savanna-portfolio/
+
+# Don't rewrite real files
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Send everything to index.php
+RewriteRule ^(.*)$ index.php [QSA,L]
