@@ -70,7 +70,7 @@
                 <i class="fas fa-paper-plane"></i> Send Me a Message
             </button>
 
-            <!-- Success/Error messages (will show after form submission) -->
+            <!-- Success/Error messages -->
             <?php if (isset($_GET['success'])): ?>
             <p class="success">Thank you! Your message has been sent.</p>
             <?php endif; ?>
@@ -81,7 +81,7 @@
         </section>
     </main>
 
-    <!-- Modal Form (hidden by default) -->
+    <!-- Modal Form-->
     <div class="modal-overlay" id="contactModal">
         <div class="modal-content">
             <button class="close-modal" id="closeModalBtn">&times;</button>
@@ -126,14 +126,14 @@
     // Open modal when "Send Me a Message" button is clicked
     openModalBtn.addEventListener('click', function() {
         contactModal.style.display = 'flex';
-        document.body.style.overflow = 'hidden'; // Prevent scrolling
+        document.body.style.overflow = 'hidden';
     });
 
     // Close modal when X is clicked
     closeModalBtn.addEventListener('click', function() {
         contactModal.style.display = 'none';
         document.body.style.overflow = 'auto';
-        // Reset form
+
         contactForm.reset();
     });
 
@@ -183,33 +183,7 @@
             return false;
         }
 
-        // If form is valid, submit via AJAX or let it submit normally
-        // For AJAX submission (prevents page reload):
-        /*
-        e.preventDefault();
-        
-        const formData = new FormData(this);
-        
-        fetch('process_contact.php', {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                alert('Message sent successfully!');
-                contactModal.style.display = 'none';
-                contactForm.reset();
-                document.body.style.overflow = 'auto';
-            } else {
-                alert('Error: ' + data.message);
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('An error occurred. Please try again.');
-        });
-        */
+
     });
 
     function validateField(field) {
@@ -257,21 +231,21 @@
     }
 
     // Check if there are success/error messages in URL
-    // If so, show the modal automatically
+
     window.addEventListener('load', function() {
         const urlParams = new URLSearchParams(window.location.search);
         if (urlParams.has('success') || urlParams.has('error')) {
             contactModal.style.display = 'flex';
             document.body.style.overflow = 'hidden';
 
-            // Clear URL parameters after showing modal
+            // Clear URL after showing modal
             setTimeout(() => {
                 window.history.replaceState({}, document.title, window.location.pathname);
             }, 100);
         }
     });
     </script>
-    <?php include 'partials/footer.php'; ?>
+
 </body>
 
 </html>

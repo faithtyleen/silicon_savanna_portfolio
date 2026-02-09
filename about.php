@@ -20,14 +20,14 @@
                 <div class="about-text">
                     <p>
                         I am an ICT professional currently working at Konza Technopolis Development Authority,
-                        with a strong background in software development, system administration, and user support.
+                        with a strong background in software development, system administration and user support.
                     </p>
                     <p>
                         I enjoy building reliable digital solutions, improving operational efficiency,
                         and applying data-driven approaches to solve real-world problems.
                     </p>
                     <p>
-                        My journey in technology began at Kenyatta University where I studied Computer Science,
+                        My journey in technology began at Kenyatta University where I studied Computer Science
                         and has evolved through various roles in both government and private sectors.
                     </p>
                 </div>
@@ -93,8 +93,8 @@
             </div>
         </section>
 
-        <!-- EDUCATION SECTION - from appcomponent.html -->
-        <section id="certifications" class="certifications">
+        <!-- EDUCATION SECTION -->
+        <section class="certifications">
             <h2><i class="fas fa-graduation-cap"></i> Education & Certifications</h2>
             <ul>
                 <li>BSc Computer Science – Kenyatta University</li>
@@ -107,6 +107,7 @@
     </main>
 
     <?php include 'partials/footer.php'; ?>
+
 </body>
 
 </html>

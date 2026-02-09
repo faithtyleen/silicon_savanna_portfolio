@@ -13,7 +13,7 @@
     <?php include 'partials/navbar.php'; ?>
 
     <main class="container">
-        <!-- PROJECTS SECTION - EXACTLY from your appcomponent.html -->
+        <!-- PROJECTS SECTION  -->
         <section id="projects" class="projects">
             <h2><i class="fas fa-laptop-code"></i> Projects</h2>
 

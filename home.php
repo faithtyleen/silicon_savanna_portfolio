@@ -19,7 +19,7 @@
                 <h2>ICT Assistant Officer | Software Developer</h2>
                 <p>
                     Computer Science graduate with hands-on experience in system
-                    development, technical support, and data-driven solutions in both
+                    development, technical support and data-driven solutions in both
                     government and private sectors.
                 </p>
                 <div class="hero-buttons">

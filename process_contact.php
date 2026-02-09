@@ -1,5 +1,5 @@
 <?php
-// Enable error reporting for debugging (remove in production)
+// Enable error reporting 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'ip_address' => $_SERVER['REMOTE_ADDR'] ?? 'Unknown'
         ];
         
-        // Save to JSON file (for demo purposes)
+        // Save to JSON file 
         $filename = 'contact_submissions.json';
         
         // Read existing data if file exists
@@ -65,35 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         
         // Save to file
         if (file_put_contents($filename, json_encode($existing_data, JSON_PRETTY_PRINT))) {
-            // Optional: Send email notification (uncomment when ready)
-            /*
-            $to = "manyimfaith@gmail.com";
-            $email_subject = "New Contact Form Submission: " . ($subject ?: "No Subject");
-            $email_body = "
-            Name: $name
-            Email: $email
-            Subject: " . ($subject ?: "No Subject") . "
             
-            Message:
-            $message
-            
-            ---
-            IP Address: " . $_SERVER['REMOTE_ADDR'] . "
-            Time: " . date('Y-m-d H:i:s') . "
-            ";
-            $headers = "From: $email\r\n";
-            $headers .= "Reply-To: $email\r\n";
-            $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
-            
-            if (mail($to, $email_subject, $email_body, $headers)) {
-                header('Location: contact.php?success=1');
-            } else {
-                header('Location: contact.php?error=' . urlencode('Message saved but email failed to send'));
-            }
-            exit;
-            */
-            
-            // For now, just redirect with success message
             header('Location: contact.php?success=1');
             exit;
         } else {

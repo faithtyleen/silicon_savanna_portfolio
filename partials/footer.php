@@ -1,17 +1,19 @@
 <footer class="footer">
-    <p>© 2026 Faith Barmato</p>
+    <div class="footer-content">
+        <p class="copyright">© <?php echo date('Y'); ?> Faith Barmato. All rights reserved.</p>
 
-    <div class="footer-links">
-        <a href="https://www.linkedin.com/in/faith-barmato" target="_blank">
-            LinkedIn <i class="fab fa-linkedin"></i>
-        </a>
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/in/faith-barmato" target="_blank" aria-label="LinkedIn Profile">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
 
-        <a href="https://github.com/faithtyleen" target="_blank">
-            GitHub <i class="fab fa-github"></i>
-        </a>
+            <a href="https://github.com/faithtyleen" target="_blank" aria-label="GitHub Profile">
+                <i class="fab fa-github"></i> GitHub
+            </a>
 
-        <a href="mailto:manyimfaith@gmail.com">
-            Email <i class="fas fa-envelope"></i>
-        </a>
+            <a href="mailto:manyimfaith@gmail.com" aria-label="Send Email">
+                <i class="fas fa-envelope"></i> Email
+            </a>
+        </div>
     </div>
 </footer>

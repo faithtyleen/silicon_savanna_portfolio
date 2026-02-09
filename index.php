@@ -2,29 +2,14 @@
 // index.php - MANUAL ROUTER
 // Location: C:\xampp\htdocs\silicon-savanna-portfolio\index.php
 
-// ============================================
-// DEBUG MODE (Remove for production)
-// ============================================
-// Uncomment to see routing in action:
-/*
-echo "<div style='background:#f0f0f0; padding:10px; margin:10px; border:1px solid #ccc;'>";
-echo "<strong>ROUTER DEBUG:</strong><br>";
-echo "Request URI: " . $_SERVER['REQUEST_URI'] . "<br>";
-echo "Method: " . $_SERVER['REQUEST_METHOD'] . "<br>";
-echo "</div>";
-*/
-
-// ============================================
 // 1. GET THE REQUESTED URL
-// ============================================
+
 $request = $_SERVER['REQUEST_URI'];
 
 // Remove query string (?param=value) if present
 $request = strtok($request, '?');
 
-// ============================================
 // 2. REMOVE PROJECT FOLDER NAME FROM URL
-// ============================================
 $base_path = '/silicon-savanna-portfolio';
 if (strpos($request, $base_path) === 0) {
     $request = substr($request, strlen($base_path));
@@ -41,31 +26,31 @@ if ($request === '') {
     $request = '/';
 }
 
-// ============================================
+
 // 3. MANUAL ROUTING LOGIC
-// ============================================
+
 switch ($request) {
-    // ========== HOMEPAGE ==========
+    //  HOMEPAGE 
     case '/':
         require 'home.php';
         break;
     
-    // ========== ABOUT PAGE ==========
+    // ABOUT PAGE 
     case '/about':
         require 'about.php';
         break;
     
-    // ========== PROJECTS PAGE ==========
+    // PROJECTS PAGE 
     case '/projects':
         require 'projects.php';
         break;
     
-    // ========== CONTACT PAGE ==========
+    // CONTACT PAGE 
     case '/contact':
         // Check if form was submitted (POST request)
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            // Handle form submission (Day 3 Task)
-            require 'contact-process.php';
+            // Handle form submission 
+            require 'process_contact.php';
         } else {
             // Show contact form
             require 'contact.php';

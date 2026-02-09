@@ -10,4 +10,4 @@
             <a href="contact">Contact</a>
         </div>
     </div>
-    </na
+</nav>
