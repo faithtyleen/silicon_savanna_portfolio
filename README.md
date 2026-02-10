@@ -14,6 +14,8 @@ Backend: Vanilla PHP
 Frontend: HTML5, CSS3, JavaScript
 Server: Apache with .htaccess
 No frameworks used (React, Angular, Bootstrap, Tailwind)
+Routing:Manual PHP router (`index.php`)
+Styling: Custom CSS (no Bootstrap/Tailwind)
 
 Quick Start
 Using XAMPP
